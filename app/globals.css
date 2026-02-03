@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 5%;
+        --foreground: 0 0% 95%;
+        --primary: 25 30% 20%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --accent: 25 20% 45%;
+        --accent-foreground: 0 0% 98%;
+        --radius: 0.5rem;
+        --border: 25 30% 20%;
+        --input: 25 30% 20%;
+        --ring: 25 30% 40%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+.glow {
+    box-shadow: 0 0 20px rgba(161, 136, 127, 0.3);
+}
+
+.glow-hover:hover {
+    box-shadow: 0 0 30px rgba(161, 136, 127, 0.5);
+}
+
+.glassmorphism {
+    background: rgba(13, 13, 13, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(78, 52, 46, 0.3);
+}
+
+.progress-glow {
+    background: linear-gradient(90deg, #4E342E 0%, #A1887F 100%);
+    box-shadow: 0 0 10px rgba(161, 136, 127, 0.5);
+}
